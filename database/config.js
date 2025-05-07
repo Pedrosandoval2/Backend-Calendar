@@ -4,12 +4,7 @@ const mongoose = require('mongoose');
 const dbConnection = async() => {
 
     try {
-        await mongoose.connect( process.env.DB_CNN , {
-        // await mongoose.connect( 'mongodb://127.0.0.1:27017/calendar-db-mern' , {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        });
+        await mongoose.connect( process.env.DB_CNN, { useUnifiedTopology: true });
 
         console.log('DB Online');
 
